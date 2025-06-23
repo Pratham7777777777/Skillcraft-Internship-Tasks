@@ -1,0 +1,117 @@
+In command prompt(Windows + R and then write cmd) (Not VS code terminal) write npx create-react-app folder name for this folder we write (npx create-react-app MY-APP).
+Write (npm start) in vs terminal so it'll create your react app or it'll open the website of yours. 
+Below link (http://192.168.56.1:3000) which is mentioned in our terminal after step 2 so it'll open the same app in any device of your if and only if both devices are connected with same net.
+All the code we can write in src folder and particularly in App.js file so it'll perform changes in our website.
+Below one is a 1 react code which I am writing.
+
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  let a=10;
+  return (
+    <>
+    <h3>My name is Pratham</h3>
+    <p>I am learning React</p>
+    </>
+  );
+}
+
+export default App;
+
+In the above code it is necessary to open and close terminal like this <>....</> except this it will give us a error.
+So we will perform some bootstrap logic in this app so we have placed the link in index.html file which is in public folder.
+
+There is a one extension name ES7+ React of dsznajder in which you can click snippet so there will be some short form of variable which is mentioned full name of short form which is useful in react.
+
+We have to create MyComponents folder in src and in MyComponents folder create a Header.js file and in that file write rfc so it will import react with function so it'll save time.
+
+Now we have replace the content of App.js into the Header.js and paste in the return bracket by removing all the line which is present earlier before the pasting.
+
+And in the App.js we closed the Header file with the / and import header in App.js file so it will be same like creating a navbar which is create earlier in App.js file.
+
+Now we will make footer Todos and Todo file in same folder MyComponents and import as well.
+
+In footer todo and todos list we have create a rafc like react with array function.
+
+In footer todos and todo we have write like that {} while importing in App.js file just because in respected files there is a export const so whenever there is const so we have to write like this {} and in header there is export default so we can simply write it.
+
+Props is like the Javascript object which is passing from parents component to child component App.js is our parent component and child component can be your using tag like In app.js I have write in Header tag by mentioning title is My Todos List and in Header file we have written the props in argument of header and whenever you have to use that word so simply write {props.title} and make sure that if we have to access props component so we have to write in this {}.
+
+So like we have mention the search bar in our parent component and there value is boolean and it is used in a Header file at last of form tag.
+
+In header file we can write impt and in impt it will import proptypes in that at last in Header.js we have write Header.proptypes and in that we have mention that title:PropTypes.string if the value of title in header file is integer so it will print the value but in console file it will give you an warning error.It doesn't impact too much on our website but it makes our code robust and it will easier for us to find bugs.
+
+Now there is a topic of defaultProps it means whenever you write some value of any variable in respective file and that variable is not assigned some value in file so it will replace the word like In Header.js we have write Header.defaultProps in that we have write Your title here it means in app.js there is no name of title is there and in the main file title name is mention so by default it will print the value Your title here.
+
+In Todos.js we are creating a div which classname is container and in that we have write in h3 todo works and then we write the logic that if it works so it will print the 0 value of array and those array is creating in a app.js with the name of todos and we have write the concept in todoitem.js.
+
+Now here we are performing an ondelete function in that we try to delete function on js first remember that it will perform on three step App.js todos.js and todoitem.js . First try with App.js in that we have create a onDelete function in that we write something if user try to delete so it'll write in a console file and it will also mention in a return concept.
+
+Second Todos.js we have todo and onDelete function which we have created and these function will be carried by TodoItem so todos is a parent of todoitem and if we press the delete button so in console it is written
+
+It is written like todo for that in todoitem we passed the arrow function if we call only function so it will default print the statement in console file so that's why we have used the arrow function and we have passed this statement in todos.js key={todo.sno} because before check in console file it give me error after this statement it is not giving me a error.
+
+Now we are using use state hook which is work in a app.js and in that const [todos, settodos] = useState settodos is a function which can update todos and in that filter is a higher order array method in which we can delete the todos list by performing filter function.
+
+Now we have add in todos.js that if the length of todos is 0 so it will print that No todos to display otherwise it works accordingly.
+
+These 3 items are changed in elements directly in website element.style position: absolute;top: 100vh;width: 100%; it will be performed in a footer in footer.js
+and you can manually add the value like this look in the footer.js if you have to look what is the changes in it so look at the bottom while scrolling you can see the footer. This is how you can add style in react.js
+
+Now in addtodo we have create a proper structure of adding an item so it will be displayed in it we have taken a whole structure from bootstrap by searching form in it and edit some name w.r.t our website.
+
+We can perform minweight in our todos if we perform minweight so no need to perform footer style in it.
+
+In todos we have add the line between two todo list.
+
+While we running our program if there is no todos list and you try to add some todos in it so it will give an error that's why in app.js we have create a sno which works for that problem.
+
+We have comment out all todos so when user add their own todos so it will directly shown into the website.
+So that's why we have use useEffect hook when user want to change todos so call the method we want so the method is localStorage.setItem("todos", JSON.stringify(todos)); and the meaning of above code is that whenever user enter a todos it will change the todos in a todos list.It means that after adding todos if you reload your website so those todos which are add in our list is remain as it is.
+
+We have to install react router dom in our terminal it is kind of when I click on about and it give me a information about website without reloading we can write in terminal like that npm install react-router-dom.
+
+There is a documentation of react router dom (rrd) like bootstrap so you can open it and use accordingly.
+
+These are the codes of document react router dom <Router>
+      <Header title="My Todos List" searchBar={false} /> 
+      <Switch>
+          <Route exact path="/" render={()=>{
+            return(
+            <>
+            <AddTodo addTodo={addTodo} />
+            <Todos todos={todos} onDelete={onDelete} /> 
+            </>)
+          }}> 
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route> 
+        </Switch> 
+      <Footer />
+    </Router>  in that we can execute individual component depends on user clicking and we have use exact path if it is same so it will execute.
+
+These are from documentation as well import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+And we create a About.js file.
+
+In header.js import link from rrd and then press the ctrl+F key to replace href into to and <a> into <Link> it will replace all the item related to name and change the value like in about to=/about home=/ these are the things mentioned in a app.js as well.
+
+In rrd documentation you can't get exact code   <Router>
+        <Header title="My Todos List" searchBar={false} />
+        <Routes>
+          <Route exact path="/" element={
+            <>
+              <AddTodo addTodo={addTodo} />
+              <Todos todos={todos} onDelete={onDelete} />
+            </>
+          } />
+          <Route exact path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </Router> there will be some change because after 2 3 years change will occur so it will change accordingly we have change routes from switch and many more and then website will occur perfectly.
